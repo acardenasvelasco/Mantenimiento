@@ -1,0 +1,45 @@
+Se ingresa a terminal como usuario Root se agregan codigos actualizacion:
+sudo apt-get update
+sudo apt-get upgrade
+Se instalan las siguientes aplicaciones
+sudo apt-get install mysql-server
+sudo apt-get install apache2
+sudo apt-get install php php-mysql
+sudo apt-get install php-mbstring
+Se descarga la aplicacion
+wget http://www.sanedrac.info/webERP_4.15.1.zip
+Se descomprime
+sudo unzip webERP_4.15.1.zip -d /var/www/html/
+Se ingresa a la carpeta html
+cd /var/www/html/
+Se verifica los permisos de cada archivo en la carpeta
+ll
+Se cambia los permiso de la Carpeta webERP-4.15.1
+sudo chmod -R 755 webERP-4.15.1
+sudo chown -R www-data: webERP-4.15.1
+Se vuelve a verificar y se revisan los cambios
+ll
+Se restablece el servidor apache
+/etc/init.d/apache2 restart
+Se ingresa a la base de datos con la contraseña de Root y luego la contraseña de la base de datos
+sudo mysql -u root -p
+Se crea la base de datos weberp
+create database weberp;
+Se crea usuario y contraseña para la base de datos
+CREATE USER 'andres'@'localhost' IDENTIFIED BY 'password';
+Se generan los permisos
+GRANT ALL PRIVILEGES ON weberp.* TO 'andres'@'localhost';
+flush privileges;
+exit
+Revisamos la ip con ifconfig en este caso la direccion es 192.168.0.8
+ingresamos a la direccion para verificar
+192.168.0.8/webERP-4.15.1/
+En la pagina de la aplicacion donde el titulo es
+"webERP Installation Wizard"
+En el reglon de Database User Name: se ingresa el Nombre ingresado "andres"
+En el reglon Password: Se ingresa "password"
+Aplicamos Next Step
+En Company Setting ingresamos el nombre de la empresa y el logo de esta.
+Si no se modifica la cuenta de Administrador el usuario y contraseña queda por defecto:
+User: admin
+Password: weberp
