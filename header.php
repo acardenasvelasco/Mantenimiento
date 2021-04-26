@@ -3,7 +3,7 @@
 /*	Titles and screen header */
 
 //	Needs the file config.php loaded where the variables are defined for $RootPath.
-//	$Title - should be defined in the page before this file is included.
+//	$Title - should be defined in the page before this file is included
 //	The line '<meta name="viewport" content="width=device-width, initial-scale=1">' is to tell the small device that the website is a responsive site (keep relationship between CSS pixels and device pixels).
 //	All the echo() functions are formatted thinking on the html page than in the php script style.
 
