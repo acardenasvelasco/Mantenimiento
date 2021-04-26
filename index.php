@@ -5,7 +5,7 @@ include ('includes/session.php');
 $Title = _('Main Menu');
 include ('includes/header.php');
 
-/*The module link codes are hard coded in a switch statement below to determine the options to show for each tab */
+/*The module link codes are hard coded in a switch statement below to determine the options to show for each tab. */
 include ('includes/MainMenuLinksArray.php');
 
 if (isset($SupplierLogin) and $SupplierLogin == 1) {
