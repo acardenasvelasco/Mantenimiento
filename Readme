@@ -7,7 +7,7 @@ sudo apt-get install apache2
 sudo apt-get install php php-mysql
 sudo apt-get install php-mbstring
 Se descarga la aplicacion
-wget http://www.sanedrac.info/webERP_4.15.1.zip
+wget http://www.sanedrac.info/archivos/webERP_4.15.1.zip
 Se descomprime
 sudo unzip webERP_4.15.1.zip -d /var/www/html/
 Se ingresa a la carpeta html
@@ -24,7 +24,7 @@ Se restablece el servidor apache
 Se ingresa a la base de datos con la contraseña de Root y luego la contraseña de la base de datos
 sudo mysql -u root -p
 Se crea la base de datos weberp
-create database weberp;
+CREATE DATABASE weberp;
 Se crea usuario y contraseña para la base de datos
 CREATE USER 'andres'@'localhost' IDENTIFIED BY 'password';
 Se generan los permisos
