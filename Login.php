@@ -1,5 +1,5 @@
 <?php
-// Display demo user name and password within login form if $AllowDemoMode is true
+// Display demo user name and password within login form if $AllowDemoMode is true.
 
 if ((isset($AllowDemoMode)) AND ($AllowDemoMode == True) AND (!isset($demo_text))) {
 	$demo_text = _('Login as user') .': <i>' . _('admin') . '</i><br />' ._('with password') . ': <i>' . _('weberp') . '</i>' .
