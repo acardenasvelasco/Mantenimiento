@@ -5,7 +5,7 @@ include ('includes/session.php');
 $Title = _('Main Menu');
 include ('includes/header.php');
 
-/*The module link codes are hard coded in a switch statement below to determine the options to show for each tab. */
+/*The module link codes are hard coded in a switch statement below to determine the options to show for each tab */
 include ('includes/MainMenuLinksArray.php');
 
 if (isset($SupplierLogin) and $SupplierLogin == 1) {
@@ -58,7 +58,6 @@ if (isset($_GET['Application'])) { /*This is sent by this page (to itself) when 
 // BEGIN MainMenuDiv ===========================================================
 // Option 1:
 echo '<div class="row well sidebar-nav ">';
-echo '<div class="col-md-3">';
 echo '<div id="MainMenuDiv" class= "collapse navbar-collapse navbar-bootsnipp-collapse sidebar-navbar-collapse ">';
 echo '<ul class="nav">'; //===HJ===
 /*
@@ -86,7 +85,7 @@ while ($i < count($ModuleLink)) {
 	}
 	$i++;
 }
-echo '</ul></div></div>'; // MainMenuDiv ===HJ===
+echo '</ul></div>'; // MainMenuDiv ===HJ===
 
 
 //=== SubMenuDiv (wrapper) ==============================================================================
